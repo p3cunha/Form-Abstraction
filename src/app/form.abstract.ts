@@ -1,17 +1,7 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
 
 export abstract class CardFormAbstract {
-  openNewCard = false;
-  isStoreCards = false;
   public form: FormGroup;
-  protected isflipped: boolean;
-  protected ccsingle: string;
-  protected color: string;
-  protected name: string;
-  protected orderErrorPayment$: Observable<string>;
-  protected paymentsLoadingState$: Observable<boolean>;
-
   constructor(protected formBuilder: FormBuilder) {
     this.buildForm();
   }
